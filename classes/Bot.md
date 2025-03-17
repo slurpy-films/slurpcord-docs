@@ -7,7 +7,7 @@
 
 ---
 
-## Constructor
+# Constructor
 The `Bot` class constructor initializes a bot instance.
 
 **Arguments:**
@@ -23,6 +23,8 @@ const bot = new Bot("TOKEN", "?");
 
 ---
 
+# Methods:
+
 ## command()
 Creates a new command for the bot.
 
@@ -32,7 +34,7 @@ Creates a new command for the bot.
 
 **Example:**
 ```javascript
-bot.command("ping", (message) => {
+bot.command("ping", (message, input) => {
     message.reply("Pong!");
 });
 ```
@@ -40,7 +42,7 @@ bot.command("ping", (message) => {
 ---
 
 ## slashCommand()
-Creates a new slash command handler for the bot.
+Creates a new slash command handler for the bot. Slashcommands does not work with this as of now. Use event().
 
 **Arguments:**
 - `name` - The name of the slash command.
@@ -56,7 +58,7 @@ bot.slashCommand("hello", (interaction) => {
 ---
 
 ## event()
-Registers an event listener for specific events in the bot.
+Registers an event listener for specific events in the bot. As of now the only events are: MessageCreate, InteractionCreate, MemberJoin, MemberLeave. More will be added in the future.
 
 **Arguments:**
 - `event` - The event to listen for. Use Events for this.
