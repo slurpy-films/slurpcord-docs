@@ -30,7 +30,7 @@ Creates a new command for the bot.
 
 **Arguments:**
 - `name` - The name of the command.
-- `action` - The function to execute when the command is called.
+- `action` - The function to execute when the command is called. It will be called with two arguments. The [message](https://github.com/slurpy-films/slurpcord-docs/tree/master/structures/Message.md), and the input the user provides.
 
 **Example:**
 ```javascript
